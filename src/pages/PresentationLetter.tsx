@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function PresentationLetter(){
     return (
-        <div className="block rounded-xl border border-gray-700 bg-gray-800 p-4 shadow-xl sm:p-6 lg:p-8 w-11/12 m-auto mt-4">
+        <div id="aboutSection" className="block rounded-xl border border-gray-700 bg-gray-800 p-4 shadow-xl sm:mt-4 md:mt-4 sm:mx-auto md:m-auto sm:p-6 lg:p-8 w-11/12 m-auto lg:w-5/12 lg:inline-block lg:mr-8 lg:align-top lg:mt-10">
             <img src="telescope.svg" className=" w-20"></img>
             <h3 className="mt-0 text-lg font-bold text-white sm:text-xl">
                 Felipe Specht
