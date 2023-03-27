@@ -12,6 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@types/node": "18.15.10",
     "@types/react": "18.0.29",
     "@types/react-dom": "18.0.11",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@types/jquery": "^3.5.16",
     "autoprefixer": "^10.4.14",
+    "emailjs": "^4.0.1",
     "gh-pages": "^5.0.0",
     "jquery": "^3.6.4",
     "postcss": "^8.4.21",

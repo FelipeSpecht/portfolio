@@ -7,6 +7,7 @@ import $ from 'jquery'
 import PresentationLetter from './PresentationLetter'
 import Experience from './Experience'
 import Skills from './Skills'
+import Contact from './Contact'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,6 +20,7 @@ export default function Home() {
         <Skills />
       </div>
       <Experience />
+      <Contact />
     </>
   )
 }

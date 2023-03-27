@@ -33,7 +33,7 @@ export default function Header() {
                         <li><button onClick={() => scroll('#skillsSection')} className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75" >Skills</button></li>
                         <li><button onClick={() => scroll('#experienceSection')} className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75" >Experience</button></li>
                         <li><button className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75" >Projects</button></li>
-                        <li><button className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75" >ContactAAAA</button></li>
+                        <li><button className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75" >Contact</button></li>
                     </ul>
                     </nav>
                     <div className="hidden w-3/4 md:hidden md:w-auto absolute top-11 right-4" style={{ animation: "1s infinite alternate slideinout" }} id="navbar-default">
