@@ -1,5 +1,4 @@
 import { createElement, FormEvent, MouseEvent, useState } from "react";
-import apiKey from "../../emailkey.js";
 import emailjs from '@emailjs/browser';
 import ReactDOM from "react-dom";
 import ShowSuccessMessage from "./ShowSuccessMessage";
@@ -9,6 +8,7 @@ import { Node } from "typescript";
 export default function Contact(){
 
     const sendEmail = (event: MouseEvent) => {
+        document.querySelector("#loadingScreen")?.classList.toggle("hidden");
 
         event.preventDefault();
         let form = document.querySelector("#emailForm");
@@ -21,9 +21,12 @@ export default function Contact(){
         if(!params.email.includes("@")){
             console.log("");
         }else{
-            emailjs.send(apiKey.SERVICE_ID, apiKey.TEMPLATE_ID, params, apiKey.PUBLIC_KEY).then(() => {
+            emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID as string, process.env.NEXT_PUBLIC_TEMPLATE_ID as string, undefined, process.env.NEXT_PUBLIC_PUBLIC_KEY as string).then(() => {
                 document.querySelector("#containerSuccessMessage")?.classList.toggle("hidden");
-            }, () => {
+                document.querySelector("#loadingScreen")?.classList.toggle("hidden");
+            }, (err) => {
+                console.log(err);
+                document.querySelector("#loadingScreen")?.classList.toggle("hidden");
                 (document.querySelector("#errorMessage") as HTMLElement).style.bottom = "0";
                 setTimeout(() => {
                     (document.querySelector("#errorMessage") as HTMLElement).style.bottom = "-80px";
@@ -37,6 +40,7 @@ export default function Contact(){
 
     const [value, setValue] = useState("");
     const onInput = (e: FormEvent) => {
+
         let form = document.querySelector("#emailForm");
         let children = [form?.querySelector("#contact-form-name"), form?.querySelector("#contact-form-email"), form?.querySelector("#message")]
         let inputsHaveData = true;

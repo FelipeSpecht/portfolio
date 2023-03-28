@@ -1,7 +1,6 @@
 import { Component, useRef } from "react";
 import $ from 'jquery'
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Header() {
     if(typeof window !== "undefined"){
@@ -26,7 +25,7 @@ export default function Header() {
 
     return <header aria-label="Site Header" className="bg-white dark:bg-gray-900">
             <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-                <Link className="block text-teal-600 dark:text-teal-300" href="/"><Image alt="" src="code.svg" className="w-14 inline-block"></Image><span className="inline-block text-gray-200 text-lg align-middle">Felipe Specht</span></Link>
+                <Link className="block text-teal-600 dark:text-teal-300" href="/"><img alt="" src="code.svg" className="w-14 inline-block"></img><span className="inline-block text-gray-200 text-lg align-middle">Felipe Specht</span></Link>
                 <div className="flex flex-1 items-center justify-end">
                     <nav aria-label="Site Nav" className="hidden md:block">
                     <ul className="flex items-center gap-6 text-sm">
