@@ -8,9 +8,7 @@ export default function Experience() {
 					</h2>
 
 					<p className="mt-4 text-gray-500 dark:text-gray-400 sm:text-xl">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolores
-						laborum labore provident impedit esse recusandae facere libero harum
-						sequi.
+						Below are some important metrics that I achieved in the few past years.
               		</p>
             	</div>
 
