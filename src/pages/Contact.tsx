@@ -1,12 +1,15 @@
-import { FormEvent, MouseEvent, useState } from "react";
-import ShowMessage from "./ShowMessage";
+import { createElement, FormEvent, MouseEvent, useState } from "react";
 import apiKey from "../../emailkey.js";
 import emailjs from '@emailjs/browser';
+import ReactDOM from "react-dom";
+import ShowSuccessMessage from "./ShowSuccessMessage";
+import ShowErrorMessage from "./ShowErrorMessage";
+import { Node } from "typescript";
 
 export default function Contact(){
 
     const sendEmail = (event: MouseEvent) => {
-        
+
         event.preventDefault();
         let form = document.querySelector("#emailForm");
         let params = {
@@ -18,14 +21,19 @@ export default function Contact(){
         if(!params.email.includes("@")){
             console.log("");
         }else{
-            emailjs.send(apiKey.SERVICE_ID, apiKey.TEMPLATE_ID, params, apiKey.PUBLIC_KEY).then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-            }, (error) => {
-                console.log(error);
+            emailjs.send(apiKey.SERVICE_ID, apiKey.TEMPLATE_ID, params, apiKey.PUBLIC_KEY).then(() => {
+                document.querySelector("#containerSuccessMessage")?.classList.toggle("hidden");
+            }, () => {
+                (document.querySelector("#errorMessage") as HTMLElement).style.bottom = "0";
+                setTimeout(() => {
+                    (document.querySelector("#errorMessage") as HTMLElement).style.bottom = "-80px";
+                    setTimeout(() => {
+                        document.querySelector("#errorMessage")?.remove();
+                    }, 500)
+                }, 3000)
             });
         }
     }
-
 
     const [value, setValue] = useState("");
     const onInput = (e: FormEvent) => {
@@ -38,6 +46,10 @@ export default function Contact(){
                 inputsHaveData = false;
             }
         }
+
+        if(!(children[1] as HTMLInputElement).value.includes("@")){
+            inputsHaveData = false;
+        } 
 
         let inputValue = inputsHaveData ? inputsHaveData+"" : "";
 
@@ -71,6 +83,8 @@ export default function Contact(){
                     </div>
                 </div>
             </div>
+            <ShowSuccessMessage />
+            <ShowErrorMessage />
         </form>
     )
 }
