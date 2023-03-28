@@ -21,7 +21,7 @@ export default function Contact(){
         if(!params.email.includes("@")){
             console.log("");
         }else{
-            emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID as string, process.env.NEXT_PUBLIC_TEMPLATE_ID as string, undefined, process.env.NEXT_PUBLIC_PUBLIC_KEY as string).then(() => {
+            emailjs.send("service_tyyr8pp", "template_c8p7lkb", undefined, "OndcSE9d3QDqQpUoq").then(() => {
                 document.querySelector("#containerSuccessMessage")?.classList.toggle("hidden");
                 document.querySelector("#loadingScreen")?.classList.toggle("hidden");
             }, (err) => {
