@@ -1,9 +1,9 @@
 export default function Skills() {
     return (
-        <div id="skillsSection" className="border-gray-700 rounded-2xl bg-gray-800 w-11/12 m-auto border mt-10 lg:w-5/12 lg:inline-block lg:ml-0 lg:align-top ">
+        <div id="skillsSection" className="border-gray-700 rounded-2xl pb-4 bg-gray-800 w-11/12 m-auto border mt-10 lg:w-5/12 lg:inline-block lg:ml-0 lg:align-top ">
             <p className="p-4 font-bold text-black text-md dark:text-white">Proficiency</p>
             <ul>
-                <li className="flex items-center justify-between py-3 text-gray-600 dark:text-gray-200 ">
+                <li className="flex items-center justify-between pb-2 text-gray-600 dark:text-gray-200 ">
                     <div className="flex items-center justify-start text-sm">
                         <span className="mx-4">
                             01
@@ -17,7 +17,7 @@ export default function Skills() {
                         </path>
                     </svg>
                 </li>
-                <li className="flex items-center justify-between py-3 text-gray-600 dark:text-gray-200 dark:border-gray-800">
+                <li className="flex items-center justify-between pb-2 text-gray-600 dark:text-gray-200 dark:border-gray-800">
                     <div className="flex items-center justify-start text-sm">
                         <span className="mx-4">
                             02
@@ -31,7 +31,7 @@ export default function Skills() {
                         </path>
                     </svg>
                 </li>
-                <li className="flex items-center justify-between py-3 text-gray-600 dark:text-gray-200">
+                <li className="flex items-center justify-between pb-2 text-gray-600 dark:text-gray-200">
                     <div className="flex items-center justify-start text-sm">
                         <span className="mx-4">
                             03
@@ -45,7 +45,7 @@ export default function Skills() {
                         </path>
                     </svg>
                 </li>
-                <li className="flex items-center justify-between py-3 text-gray-600 dark:text-gray-200">
+                <li className="flex items-center justify-between pb-2 text-gray-600 dark:text-gray-200">
                     <div className="flex items-center justify-start text-sm">
                         <span className="mx-4">
                             04
@@ -59,7 +59,7 @@ export default function Skills() {
                         </path>
                     </svg>
                 </li>
-                <li className="flex items-center justify-between py-3 text-gray-600 dark:text-gray-200">
+                <li className="flex items-center justify-between pb-2 text-gray-600 dark:text-gray-200">
                     <div className="flex items-center justify-start text-sm">
                         <span className="mx-4">
                             05
@@ -73,7 +73,7 @@ export default function Skills() {
                         </path>
                     </svg>
                 </li>
-                <li className="flex items-center justify-between py-3 text-gray-600 dark:text-gray-200">
+                <li className="flex items-center justify-between pb-2 text-gray-600 dark:text-gray-200">
                     <div className="flex items-center justify-start text-sm">
                         <span className="mx-4">
                             06
@@ -87,7 +87,7 @@ export default function Skills() {
                         </path>
                     </svg>
                 </li>
-                <li className="flex items-center justify-between py-3 text-gray-600 dark:text-gray-200">
+                <li className="flex items-center justify-between pb-2 text-gray-600 dark:text-gray-200">
                     <div className="flex items-center justify-start text-sm">
                         <span className="mx-4">
                             07
@@ -101,7 +101,7 @@ export default function Skills() {
                         </path>
                     </svg>
                 </li>
-                <li className="flex items-center justify-between py-3 text-gray-600 dark:text-gray-200">
+                <li className="flex items-center justify-between pb-2 text-gray-600 dark:text-gray-200">
                     <div className="flex items-center justify-start text-sm">
                         <span className="mx-4">
                             08

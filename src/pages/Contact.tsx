@@ -59,7 +59,7 @@ export default function Contact(){
     return (
         <form id="emailForm" className="flex w-full">
             <div className="w-11/12 max-w-2xl px-5 py-10 pt-4 m-auto rounded-lg shadow bg-transparent mb-4">
-                <div className="mb-6 text-3xl font-light text-center text-gray-800 dark:text-white">
+                <div className="mb-6 text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl text-center">
                     Contact me!
                 </div>
                 <div className="grid max-w-xl grid-cols-2 gap-4 m-auto">

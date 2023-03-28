@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="lg:w-4/5 lg:m-auto lg:flex lg:content-center lg:items-center">
+      <div className="lg:w-4/5 lg:m-auto lg:flex lg:content-center lg:items-center mt-3 lg:mt-0">
         <PresentationLetter />
         <Skills />
       </div>
